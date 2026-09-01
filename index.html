@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="nl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flow Field — Focus & Peripheral Awareness</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="landing">
+<main class="container">
+  <div class="brand">FLOW FIELD</div>
+  <p class="tagline">Central focus · Peripheral awareness · Open attention</p>
+  <div class="hero-mandala" id="heroMandala"></div>
+  <section class="card intro">
+    <h1>Train je aandacht als een visueel veld</h1>
+    <p>Een experimenteel 10-minutenprotocol met centrale geometrische complexiteit en perifere kleurprikkels.</p>
+    <ul>
+      <li>Fixeer het centrale punt.</li><li>Houd je blik zo stabiel mogelijk.</li>
+      <li>Neem de buitenring perifeer waar.</li><li>Dit is geen klinische gezichtsveldtest.</li>
+    </ul>
+    <button class="primary" onclick="location.href='training.html'">START 10 MINUTEN</button>
+    <p class="small">Resultaten worden alleen lokaal in deze browser opgeslagen.</p>
+  </section>
+</main>
+<script src="js/mandala.js"></script>
+<script>document.getElementById('heroMandala').innerHTML=createMandalaSVG({detail:9,outerColors:true,size:520});</script>
+</body></html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="nl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Flow Field — Resultaat</title><link rel="stylesheet" href="css/style.css"></head>
+<body class="results-page"><main class="container">
+<div class="brand">FLOW FIELD</div><p class="tagline">Session result</p>
+<section class="card result-card"><h1>Jouw sessie</h1>
+<div class="score-grid">
+<div><span id="pdi">—</span><label>Peripheral Detection</label></div>
+<div><span id="dai">—</span><label>Dual Attention</label></div>
+<div><span id="flow">—</span><label>Flow / Open Awareness</label></div>
+</div>
+<h2>Details</h2><div id="details" class="details"></div>
+<div class="actions"><button class="primary" onclick="location.href='training.html'">OPNIEUW</button>
+<button class="secondary" onclick="location.href='index.html'">HOME</button></div>
+<p class="small">Experimentele aandachtsoefening; geen medische of klinische gezichtsveldtest.</p>
+</section></main>
+<script>
+const d=JSON.parse(localStorage.getItem('flowFieldLastSession')||'null');
+if(!d){details.textContent='Geen sessieresultaat gevonden.'}
+else{
+pdi.textContent=d.pdi+'%'; dai.textContent=d.dai+'%'; flow.textContent=d.flow+'/10';
+details.innerHTML='<p>Perifere detectie: <strong>'+d.correct+'/'+d.trials+'</strong> correct</p>'+
+'<p>Gemiddelde reactietijd: <strong>'+d.avgRT+' ms</strong></p>'+
+'<p>Grootste geteste eccentriciteit: <strong>'+d.maxEccentricity+'°</strong></p>'+
+'<p>Datum: <strong>'+new Date(d.timestamp).toLocaleString('nl-BE')+'</strong></p>';
+}
+</script></body></html>
